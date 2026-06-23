@@ -5,75 +5,80 @@ html {
 }
 
 body {
-  background: #050816;
+  margin: 0;
+  background: #050a12;
+  color: #e5edf7;
 }
 
-.bg-grid {
+/* Main page backdrop. The layered grid and soft radial light are what give the
+   mockup its technical IDE feel without using heavy 3D or canvas effects. */
+.portfolio-grid {
+  background-color: #050a12;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
-  background-size: 48px 48px;
+    linear-gradient(rgba(148, 163, 184, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.055) 1px, transparent 1px),
+    radial-gradient(circle at 48% 0%, rgba(14, 165, 233, 0.16), transparent 34rem),
+    radial-gradient(circle at 85% 20%, rgba(59, 130, 246, 0.12), transparent 24rem);
+  background-position:
+    -1px -1px,
+    -1px -1px,
+    center top,
+    right top;
+  background-size:
+    24px 24px,
+    24px 24px,
+    100% 100%,
+    100% 100%;
 }
 
-/* Skills radar: lightweight CSS creates the command-center feel without a 3D library. */
-.tech-radar-grid {
-  background:
-    radial-gradient(circle, rgba(34, 211, 238, 0.12) 1px, transparent 1px),
-    linear-gradient(rgba(34, 211, 238, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(34, 211, 238, 0.1) 1px, transparent 1px);
-  background-size: 100% 100%, 42px 42px, 42px 42px;
-  box-shadow: inset 0 0 70px rgba(34, 211, 238, 0.08);
+/* Design note: these are intentionally subtle. Keep animations small so the
+   site feels engineered and modern instead of flashy. */
+.reveal-up {
+  animation: revealUp 640ms ease-out both;
 }
 
-.tech-radar-sweep {
-  background: conic-gradient(
-    from 0deg,
-    transparent 0deg,
-    rgba(34, 211, 238, 0.04) 55deg,
-    rgba(34, 211, 238, 0.32) 72deg,
-    transparent 95deg,
-    transparent 360deg
-  );
-  animation: radarSweep 8s linear infinite;
+.delay-100 {
+  animation-delay: 100ms;
 }
 
-.tech-node {
-  border-color: rgba(148, 163, 184, 0.32);
+.subtle-float {
+  animation: subtleFloat 7s ease-in-out infinite;
 }
 
-.tech-node-cyan {
-  color: #67e8f9;
-  box-shadow: 0 0 28px rgba(34, 211, 238, 0.2);
+::selection {
+  background: #0ea5e9;
+  color: #ffffff;
 }
 
-.tech-node-blue {
-  color: #93c5fd;
-  box-shadow: 0 0 28px rgba(59, 130, 246, 0.2);
-}
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
 
-.tech-node-purple {
-  color: #d8b4fe;
-  box-shadow: 0 0 28px rgba(168, 85, 247, 0.2);
-}
-
-.tech-node-emerald {
-  color: #6ee7b7;
-  box-shadow: 0 0 28px rgba(16, 185, 129, 0.18);
-}
-
-.tech-node-yellow {
-  color: #fde68a;
-  box-shadow: 0 0 28px rgba(234, 179, 8, 0.18);
-}
-
-@keyframes radarSweep {
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes subtleFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .tech-radar-sweep {
-    animation: none;
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
   }
 }
