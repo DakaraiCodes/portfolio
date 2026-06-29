@@ -6,7 +6,7 @@ The site uses a dark command-center visual style with project cards, a technical
 
 ## Live Site
 
-https://portfolio-dakaraicodes-projects.vercel.app
+https://dakarai.vercel.app/
 
 ## Features
 
