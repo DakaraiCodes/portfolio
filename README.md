@@ -1,6 +1,6 @@
 # Dakarai Mitcham Portfolio
 
-A polished React portfolio site built to showcase my software engineering projects, technical stack, resume, and contact links in a recruiter-friendly format.
+A polished React portfolio site built to showcase my software engineering projects, technical stack, resume, and contact links.
 
 The site uses a dark command-center visual style with project cards, a technical hero section, resume access, and clear links to live projects and source code.
 
