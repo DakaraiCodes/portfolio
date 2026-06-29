@@ -443,7 +443,7 @@ function HeroSection() {
             AI Tools
           </p>
           <p className="mt-4 max-w-md text-sm leading-7 text-slate-400">
-            Computer Science student passionate about building intelligent,
+            Computer Science graduate passionate about building intelligent,
             scalable, and user-centered applications that solve real problems.
           </p>
           <div className="mt-7 flex flex-wrap gap-4">
