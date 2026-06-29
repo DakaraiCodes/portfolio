@@ -4,7 +4,7 @@ A polished React portfolio site built to showcase my software engineering projec
 
 The site uses a dark command-center visual style with project cards, a technical hero section, resume access, and clear links to live projects and source code.
 
-downloads/portfolio-header.png
+![Portfolio hero screenshot](docs/screenshots/portfolio-hero.png)
 
 
 ## Live Site
